@@ -4,6 +4,8 @@ import (
 	"net/http"
 
 	"github.com/joho/godotenv"
+	"github.com/sparkidea25/go-postgres/models"
+
 )
 
 
@@ -17,6 +19,9 @@ func main() {
 
 	}
 
+	models.connectDatabase();
+
 	server.ListenAndServe()
+
 }
 
